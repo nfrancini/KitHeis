@@ -1,0 +1,20 @@
+size 36          # NUMERO DI CELLE PER LATO
+
+T 0.100000       # TEMPERATURA
+alpha 0.250000   # PARAMETRO ALPHA
+
+eps_spin 0.1000000     # PARAMETRO REGOLATORE DELL'ACCETTANZA
+
+iTerm 100        # NUMERO DI CICLI DI TERMALIZZAZIONE
+iDec 10          # NUMERO DI CICLI DI DECORRELAZIONE
+iMis 100000      # NUMERO DI MISURE
+iOverr 5         # NUMERO DI CICLI DI OVERRELAXATION
+iStart 0         # SE 0 PARTENZA ORDINATA (A FREDDO) SE 1 PARTENZA DA FILE SE 2 PARTENZA RANDOM (A CALDO)
+iBackup 10000    # BACKUP DELLA CONFIGURAZIONE EFFETTUATO OGNI iBackup UPDATE
+
+conf_file ./conf/conf_prova.bin
+eps_file  ./eps/eps_prova.bin
+data_file ./data/data_prova.dat
+log_file  ./log/log_prova.log
+
+random_seed 745

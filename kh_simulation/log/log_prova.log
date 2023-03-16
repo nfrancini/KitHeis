@@ -1,0 +1,23 @@
++---------------------------------+
+| Simulation details for kit_heis |
++---------------------------------+
+RETICOLO ESAGONALE CON CELLE UNITARIE CONTENENTI 2 SITI.
+CELLE PER LATO DEL RETICOLO 36
+NUMERO DI COMPONENTI DELLO SPIN 3
+
+T 0.10000
+alpha 0.25000
+
+eps 0.10000
+
+iTerm 100
+iDec 10
+iMis 100000
+iOverr 5
+
+iStart 0 (0=ordinata, 1=da file , 2=random)
+iBackup 10000
+
+ACCETTANZA UPDATE METROPOLIS -0.562886
+
+PROGRAMMA ESEGUITO CORRETTAMENTE
