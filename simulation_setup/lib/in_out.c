@@ -310,6 +310,8 @@ void writeObs(FILE *fptr, Obs_t *Obs){
 // PROCEDURA CHE SCRIVE IL FILE DI LOG
 void writeLogs(SystemParam_t *Par){
   FILE *fptr;
+  double exe_time, seconds;
+  int hours, minutes;
   fptr = fopen(Par->log_file, "a");
   if(fptr == NULL){
     perror("Errore in apertura");
@@ -348,6 +350,15 @@ void writeLogs(SystemParam_t *Par){
 
   fprintf(fptr, "ACCETTANZA UPDATE METROPOLIS %lf\n\n", acc/((Par->iMis)*(Par->iDec)*(Par->N)));
 
+  // CALCOLO IL TEMPO DI ESECUZIONE
+  end = clock();
+  exe_time = ((double)end - start)/CLOCKS_PER_SEC;
+  minutes = (int)(exe_time/60);
+  seconds = exe_time - minutes*60;
+  hours = (int)(minutes/60);
+  minutes = minutes - hours*60;
+
+  fprintf(fptr, "TEMPO DI ESECUZIONE %d h %d m %lf s\n\n", hours, minutes, seconds);
   fprintf(fptr, "PROGRAMMA ESEGUITO CORRETTAMENTE\n");
 
   fclose(fptr);

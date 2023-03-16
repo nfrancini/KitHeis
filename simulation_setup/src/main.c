@@ -12,6 +12,7 @@ dsfmt_t dsfmt;                          // VARIABILE GLOBALE PER IL GENERATORE D
 int **nn;                               // ARRAY CHE MEMORIZZANO I PRIMI VICINI, nb PER SOTTORETICOLO NERO
                                         // ED nw PER SOTTORETICOLO BIANCO
 double acc=0, err1=0, err2=0;           // VARIABILE GLOBALE PER ACCETTANZA ED ERRORE
+clock_t start, end;                     // VARIABILI GLOBALI PER IL TEMPO DI ESECUZIONE
 
 // MAIN DEL PROGRAMMA
 int main(int argc, char const *argv[]) {
@@ -20,6 +21,9 @@ int main(int argc, char const *argv[]) {
   Obs_t Obs;                            // STRUTTURA DELLE OSSERVABILI
   int i, count=0;                       // CONTATORI PER TERMALIZZAZIONE E CICLO DI MISURE
   FILE *fptr;                           // PUNTATORE A FILE PER SCRIVERE I DATI
+
+  // INIZIO DELL'ESECUZIONE
+  start = clock();
 
   // INIZIALIZZO IL SISTEMA
   initializeSystem(&Param, &Fields, &Obs, argv[1]);

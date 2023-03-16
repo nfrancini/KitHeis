@@ -57,6 +57,7 @@ extern dsfmt_t dsfmt;                     // VARIABILE DI SUPPORTO PER IL DSFMT
 extern int **nn;                          // VARIABILE ESTERNA CHE NEL MAIN È GLOBALE
                                           // E CHE MEMORIZZA I PRIMI VICINI
 extern double acc, err1, err2;            // VARIABILI GLOBALI PER ACCETTANZA ED ERRORI
+extern clock_t start, end;                // VARIABILI GLOBALI PER IL TEMPO DI ESECUZIONE
 
 typedef enum {FALSE=0, TRUE=1} bool_t;    // DEFINISCO IL TIPO BOOLEANO, UTILE PER ALCUNE PROCEDURE
 
