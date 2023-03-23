@@ -46,7 +46,7 @@ int main(int argc, char const *argv[]) {
   }
   if ((Param.iStart == 0) || (Param.iStart == 2)){
     // SCRIVO I PARAMETRI SU FILE CHE POI RILEGGO NELL'ANALISI (CELLE PER LATO, NUMERO TOTALE DI SITI, NUMERO DI COMPONENTI DELLO SPIN, TEMPERATURA, ALPHA)
-    fprintf(fptr, "%d\t%d\t%d\t%lf\t%lf\n", Param.L, Param.N, K, Param.T, Param.alpha);
+    fprintf(fptr, "%d\t%d\t%d\t%lf\t%lf\n", Param.L, Param.N, K, Param.T, Param.phi);
     // PRIMA LINEA SU FILE DELLE MISURE PER CAPIRE COSA SONO LE COLONNE DI DATI
     fprintf(fptr, "#ene_dens\tmx\tmy\tmz\tnx\tny\tnz\tzx\tzy\tzz\tsx\tsy\tsz\n\n");
   }

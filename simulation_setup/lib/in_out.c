@@ -78,8 +78,8 @@ void read_from_input_Param(SystemParam_t *Par, char const *finput){
           exit(EXIT_FAILURE);
         }
       }
-      else if(strncmp(str, "alpha", 5) == 0){
-        flag = fscanf(fInput, "%lf", &(Par->alpha));
+      else if(strncmp(str, "phi", 3) == 0){
+        flag = fscanf(fInput, "%lf", &(Par->phi));
         if (flag != 1){
           perror("Errore di lettura in alpha");
           exit(EXIT_FAILURE);
@@ -331,7 +331,7 @@ void writeLogs(SystemParam_t *Par){
   fprintf(fptr, "NUMERO DI COMPONENTI DELLO SPIN %d\n\n", K);
 
   fprintf(fptr, "T %.5lf\n", Par->T);
-  fprintf(fptr, "alpha %.5lf\n\n", Par->alpha);
+  fprintf(fptr, "phi %.5lf\n\n", Par->phi);
 
   fprintf(fptr, "eps %.5lf\n\n", Par->eps1);
 

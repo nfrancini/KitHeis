@@ -13,7 +13,7 @@ double ene(SystemParam_t *Par, Field_t *Fields){
     kit_term = kit_term + (Fields->spin[i][2])*(Fields->spin[nn[i][2]][2]) + (Fields->spin[i][0])*(Fields->spin[nn[i][0]][0]) + (Fields->spin[i][1])*(Fields->spin[nn[i][1]][1]);
     heis_term = heis_term + product(Par, Fields->spin[i], Fields->spin[nn[i][2]]) + product(Par, Fields->spin[i], Fields->spin[nn[i][0]]) + product(Par, Fields->spin[i], Fields->spin[nn[i][1]]);
   }
-  ene = -2*(Par->alpha)*kit_term + (1 - (Par->alpha))*heis_term;
+  ene = 2*sin(Par->phi)*kit_term + cos(Par->phi)*heis_term;
   return ene;
 }
 

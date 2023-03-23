@@ -47,7 +47,7 @@ void ctrl_acceptance(double ac, bool_t *ctrl_1, bool_t *ctrl_2){
 // IL PARAMETRO eps1. VIENE QUINDI CHIAMATA RICORSIVAMENTE
 // LA TERMALIZZAZIONE, AUMENTATO IL CONTATORE count
 void modify_eps(SystemParam_t *Par, Field_t *Fields, bool_t ctrl_1, bool_t ctrl_2, int count){
-  double step=0.05;
+  double step=0.005;
   if((Par->eps1+step>=1.0) || (Par->eps1-step)<=0){
     printf("IMPOSSIBILE MODIFICARE IL PARAMETRO DI ACCETTANZA\n");
     exit(EXIT_FAILURE);

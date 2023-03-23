@@ -15,7 +15,7 @@ void mean_field(SystemParam_t *Par, Field_t *Fields, int site, double *mean_fiel
 
   // IL CAMPO MEDIO È UN VETTORE CON COMPONENTI f_i = -2*alpha*S{nn(site, i)}_i + (1-alpha)*three_spin_sum_i
   for(i=0;i<K;i++){
-    mean_field[i] = -2*(Par->alpha)*Fields->spin[nn[site][i]][i] + (1.0-Par->alpha)*three_sum[i];
+    mean_field[i] = 2*(sin(Par->phi))*Fields->spin[nn[site][i]][i] + (cos(Par->phi))*three_sum[i];
   }
 
   #ifdef DEBUG
